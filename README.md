@@ -12,4 +12,6 @@ El hospital mantiene un inventario de medicamentos que se utilizan para los trat
 
 Algunos pacientes requieren hospitalización. Una hospitalización ocurre cuando un paciente es admitido para recibir atención médica continua, bajo la supervisión de uno o varios doctores. Cada hospitalización tiene una fecha de ingreso, una fecha de alta, y el paciente puede recibir tratamientos durante su estancia. Información registrada de la hospitalización: Fecha de ingreso, fecha de alta, paciente involucrado y doctor responsable.
 
+#Esquema relaciones
+
 ![imatge](https://github.com/user-attachments/assets/302a1e07-9224-4d22-a383-825966b97cbb)
