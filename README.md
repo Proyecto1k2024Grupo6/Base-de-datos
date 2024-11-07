@@ -16,3 +16,5 @@ Algunos pacientes requieren hospitalización. Una hospitalización ocurre cuando
 
 
 ![image](https://github.com/user-attachments/assets/127bd413-6324-44ee-8ed4-2d563e6b758b)
+
+# Modelo Relacional:
