@@ -22,9 +22,11 @@ DOCTOR (dni, nombre, especialidad, telefono, email)
 
 PK: (dni)
 
-PACIENTE (sip, nombre, fnac, telefono, dni)
+PACIENTE (sip, nombre, fnac, telefono, dni, dni_doctor*)
 
 PK: (sip)
+
+FK: (dni_doctor) → DOCTOR
 
 ASEGURADO (sip*, aseguradora)
 
