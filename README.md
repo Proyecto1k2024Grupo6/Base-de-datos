@@ -14,7 +14,7 @@ Algunos pacientes requieren hospitalización. Una hospitalización ocurre cuando
 
 # Esquema relaciones
 
-![imatge](https://github.com/user-attachments/assets/35dabf28-7a42-4387-b6c8-bea61c0f0a6e)
+![image](https://github.com/user-attachments/assets/ad45ac8f-0456-42a2-bbc5-04427f0899e3)
 
 
 # Modelo Relacional:
