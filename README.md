@@ -48,7 +48,7 @@ FK: (dni) → DOCTOR
 
 FK: (sip) → PACIENTE
 
-TRATAMIENTO (id, fecha_inicio, fecha_final, duracion, efectos_secundarios, dni_supervisor*, sip*)
+TRATAMIENTO (id, fecha_inicio, fecha_final, efectos_secundarios, dni_supervisor*, sip*)
 
 PK: (id)
 
