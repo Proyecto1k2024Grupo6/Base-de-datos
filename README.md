@@ -30,7 +30,6 @@ Algunos pacientes requieren hospitalización. Una hospitalización ocurre cuando
 ![image](https://github.com/user-attachments/assets/503e1264-3736-47ce-b432-8bfc074cc8e5)
 
 DOCTOR (dni, nombre, especialidad, telefono, email)
-
 PK: (dni)
 
 PACIENTE (sip, nombre, fnac, telefono, dni, dni_doctor*)
