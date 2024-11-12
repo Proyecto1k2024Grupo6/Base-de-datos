@@ -18,3 +18,40 @@ Algunos pacientes requieren hospitalización. Una hospitalización ocurre cuando
 
 
 # Modelo Relacional:
+DOCTOR (<u>dni</u>, nombre, especialidad, telefono, email)
+PK: (dni)
+
+PACIENTE (sip, nombre, fnac, telefono, dni)
+PK: (sip)
+
+CITA (id, fecha_cita, hora_cita, motivo_cita, dni*, sip*)
+PK: (id)
+FK: (dni) → DOCTOR
+FK: (sip) → PACIENTE
+
+TRATAMIENTO (id, fecha_inicio, fecha_final, duracion, efectos_secundarios, dni_supervisor*, sip*)
+PK: (id)
+FK: (dni_supervisor) → DOCTOR
+FK: (sip) → PACIENTE
+
+HOSPITALIZACION (id, fecha_ingreso, fecha_alta, area, dni_doctor*, sip*)
+PK: (id)
+FK: (dni_doctor) → DOCTOR
+FK: (sip) → PACIENTE
+
+MEDICAMENTO (id, nombre, dosis, frecuencia, observaciones)
+PK: (id)
+
+DOCTOR_MEDICAMENTO (dni*, medicamento_id*)
+PK: (dni, medicamento_id)
+FK: (dni) → DOCTOR
+FK: (medicamento_id) → MEDICAMENTO
+
+TRATAMIENTO_MEDICAMENTO (tratamiento_id*, medicamento_id*)
+PK: (tratamiento_id, medicamento_id)
+FK: (tratamiento_id) → TRATAMIENTO
+FK: (medicamento_id) → MEDICAMENTO
+
+ASEGURADO (no_asegurado, aseguradora, sip*)
+PK: (no_asegurado)
+FK: (sip) → PACIENTE
