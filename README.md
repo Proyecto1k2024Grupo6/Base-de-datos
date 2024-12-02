@@ -86,6 +86,7 @@ FK: (sip) → PACIENTE
 ## Modelo Fisico-DDL
 
 CREATE TABLE DOCTOR (
+
     dni VARCHAR(9) PRIMARY KEY,
     nombre VARCHAR(50),
     especialidad VARCHAR(30),
