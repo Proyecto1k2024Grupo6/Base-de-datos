@@ -6,6 +6,8 @@ Alejandro Exposito
 
 Liam Rodriguez Vicente
 
+Sergio Zambrana Rodriguez
+
 # Sistema-de-informacion
 
 El hospital atiende a una variedad de pacientes que requieren diferentes servicios médicos. Cada paciente tiene un expediente clínico que contiene su información personal y médica. Los pacientes pueden tener múltiples consultas con diferentes doctores en el hospital, y pueden ser admitidos en el hospital para hospitalización. Información registrada del paciente: Nombre completo, fecha de nacimiento, dirección, teléfono de contacto y correo electrónico. También se incluye información médica como su historial clínico y tratamientos previos.
