@@ -320,4 +320,12 @@ INSERT INTO MEDICAMENTO (nombre, dosis, frecuencia, observaciones, dni_doctor, s
 ('Paracetamol', '500mg', 'Cada 6 horas', 'No exceder la dosis recomendada', '23456789B', 100000002);
 
 
+## Participacion
+
+Alejandro Exposito y Liam Rodriguez: DDL
+
+Alejandro Rodriguez: DML
+
+Sergio Zambrana: Ayudar en DML y Script SQL para vaciar todas las tablas
+
 
