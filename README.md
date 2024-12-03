@@ -194,7 +194,7 @@ CREATE TABLE MEDICAMENTO (
 ('01234567J', 'Dra. Sofía Morales', 'Neumología', 690012345, 'sofia.morales@hospital.com');
 
 
-INSERT INTO PACIENTE (sip, nombre, fnac, telefono, dni_doctor) VALUES
+### INSERT INTO PACIENTE (sip, nombre, fnac, telefono, dni_doctor) VALUES
 
 (100000001, 'Carlos Ruiz', '1985-05-10', 690123456, '12345678A'),
 
