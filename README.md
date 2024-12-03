@@ -171,7 +171,7 @@ CREATE TABLE MEDICAMENTO (
 
 ## Modelo Fisico-DML
 
-INSERT INTO DOCTOR (dni, nombre, especialidad, telefono, email) VALUES
+### INSERT INTO DOCTOR (dni, nombre, especialidad, telefono, email) VALUES
 
 ('12345678A', 'Dr. Juan Pérez', 'Cardiología', 600123456, 'juan.perez@hospital.com'),
 
@@ -217,7 +217,7 @@ INSERT INTO PACIENTE (sip, nombre, fnac, telefono, dni_doctor) VALUES
 (100000010, 'Elena Díaz', '1987-04-05', 699012345, '01234567J');
 
 
-INSERT INTO ASEGURADO (sip, aseguradora) VALUES
+### INSERT INTO ASEGURADO (sip, aseguradora) VALUES
 
 (100000001, 'Mapfre'),
 
@@ -239,10 +239,9 @@ INSERT INTO ASEGURADO (sip, aseguradora) VALUES
 
 (100000010, 'Caser');
 
---En la tabla no asegurado no he insertado nada ya que todos estan asegurados
 
 
-INSERT INTO CITA (fecha_cita, hora_cita, motivo_cita, dni_doctor, sip_paciente) VALUES
+### INSERT INTO CITA (fecha_cita, hora_cita, motivo_cita, dni_doctor, sip_paciente) VALUES
 
 ('2024-12-10', '10:00:00', 'Chequeo general', '12345678A', 100000001),
 
@@ -265,7 +264,7 @@ INSERT INTO CITA (fecha_cita, hora_cita, motivo_cita, dni_doctor, sip_paciente) 
 ('2024-12-19', '17:00:00', 'Consulta respiratoria', '01234567J', 100000010);
 
 
-INSERT INTO TRATAMIENTO (fecha_inicio, fecha_final, efectos_secundarios, dni_supervisor, sip_paciente) VALUES
+### INSERT INTO TRATAMIENTO (fecha_inicio, fecha_final, efectos_secundarios, dni_supervisor, sip_paciente) VALUES
 
 ('2024-11-01', '2025-01-01', 'Náuseas y mareos', '12345678A', 100000001),
 
@@ -289,7 +288,7 @@ INSERT INTO TRATAMIENTO (fecha_inicio, fecha_final, efectos_secundarios, dni_sup
 
 
 
-INSERT INTO HOSPITALIZACION (fecha_ingreso, fecha_alta, area, dni_doctor, sip_paciente) VALUES
+### INSERT INTO HOSPITALIZACION (fecha_ingreso, fecha_alta, area, dni_doctor, sip_paciente) VALUES
 
 ('2024-10-01', '2024-10-10', 'Cardiología', '12345678A', 100000001),
 
@@ -313,7 +312,7 @@ INSERT INTO HOSPITALIZACION (fecha_ingreso, fecha_alta, area, dni_doctor, sip_pa
 
 
 
-INSERT INTO MEDICAMENTO (nombre, dosis, frecuencia, observaciones, dni_doctor, sip_paciente) VALUES
+### INSERT INTO MEDICAMENTO (nombre, dosis, frecuencia, observaciones, dni_doctor, sip_paciente) VALUES
 
 ('Ibuprofeno', '200mg', 'Cada 8 horas', 'Tomar después de las comidas', '12345678A', 100000001),
 
