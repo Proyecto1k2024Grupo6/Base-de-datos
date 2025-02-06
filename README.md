@@ -87,6 +87,7 @@ FK: (sip) → PACIENTE
 
 ## Modelo Fisico-DDL
 
+``` sql
 CREATE TABLE DOCTOR (
 
     dni VARCHAR(9) PRIMARY KEY,
@@ -94,7 +95,8 @@ CREATE TABLE DOCTOR (
     especialidad VARCHAR(30),
     telefono INT(9),
     email VARCHAR(41)
-);
+)
+``` 
 
 CREATE TABLE PACIENTE (
 
