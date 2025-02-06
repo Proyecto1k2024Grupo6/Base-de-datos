@@ -89,7 +89,6 @@ FK: (sip) → PACIENTE
 
 ``` sql
 CREATE TABLE DOCTOR (
-
     dni VARCHAR(9) PRIMARY KEY,
     nombre VARCHAR(50),
     especialidad VARCHAR(30),
@@ -97,9 +96,8 @@ CREATE TABLE DOCTOR (
     email VARCHAR(41)
 )
 ``` 
-
+``` sql
 CREATE TABLE PACIENTE (
-
     sip INT(9) PRIMARY KEY,
     nombre VARCHAR(50),
     fnac DATE,
@@ -108,22 +106,22 @@ CREATE TABLE PACIENTE (
     dni_doctor VARCHAR(9),
     FOREIGN KEY (dni_doctor) REFERENCES DOCTOR(dni)
 );
-
+```
+``` sql
 CREATE TABLE ASEGURADO (
-
     sip INT(9) PRIMARY KEY,
     aseguradora VARCHAR(100) NOT NULL,
     FOREIGN KEY (sip) REFERENCES PACIENTE(sip)
 );
-
+```
+``` sql
 CREATE TABLE NO_ASEGURADO (
-
     sip INT(9) PRIMARY KEY,
     FOREIGN KEY (sip) REFERENCES PACIENTE(sip)
 );
-
+```
+``` sql
 CREATE TABLE CITA (
-
     id INT AUTO_INCREMENT PRIMARY KEY ,
     fecha_cita DATE,
     hora_cita TIME,
@@ -133,9 +131,9 @@ CREATE TABLE CITA (
     FOREIGN KEY (dni_doctor) REFERENCES DOCTOR(dni),
     FOREIGN KEY (sip_paciente) REFERENCES PACIENTE(sip)
 );
-
+```
+``` sql
 CREATE TABLE TRATAMIENTO (
-
     id INT PRIMARY KEY AUTO_INCREMENT,
     fecha_inicio DATE,
     fecha_final DATE,
@@ -145,9 +143,9 @@ CREATE TABLE TRATAMIENTO (
     FOREIGN KEY (dni_supervisor) REFERENCES DOCTOR(dni),
     FOREIGN KEY (sip_paciente) REFERENCES PACIENTE(sip)
 );
-
+```
+``` sql
 CREATE TABLE HOSPITALIZACION (
-
     id INT PRIMARY KEY AUTO_INCREMENT,
     fecha_ingreso DATE,
     fecha_alta DATE,
@@ -157,9 +155,9 @@ CREATE TABLE HOSPITALIZACION (
     FOREIGN KEY (dni_doctor) REFERENCES DOCTOR(dni),
     FOREIGN KEY (sip_paciente) REFERENCES PACIENTE(sip)
 );
-
+```
+``` sql
 CREATE TABLE MEDICAMENTO (
-
     id INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(50),
     dosis VARCHAR(50),
@@ -170,9 +168,10 @@ CREATE TABLE MEDICAMENTO (
     FOREIGN KEY (dni_doctor) REFERENCES DOCTOR(dni),
     FOREIGN KEY (sip_paciente) REFERENCES PACIENTE(sip)
 );
-
+```
 ## Modelo Fisico-DML
 
+```  sql
 ### INSERT INTO DOCTOR (dni, nombre, especialidad, telefono, email) VALUES
 
 ('12345678A', 'Dr. Juan Pérez', 'Cardiología', 600123456, 'juan.perez@hospital.com'),
@@ -194,8 +193,8 @@ CREATE TABLE MEDICAMENTO (
 ('90123456I', 'Dr. Pedro Gutiérrez', 'Ginecología', 680901234, 'pedro.gutierrez@hospital.com'),
 
 ('01234567J', 'Dra. Sofía Morales', 'Neumología', 690012345, 'sofia.morales@hospital.com');
-
-
+``` 
+```  sql
 ### INSERT INTO PACIENTE (sip, nombre, fnac, telefono, dni_doctor) VALUES
 
 (100000001, 'Carlos Ruiz', '1985-05-10', 690123456, '12345678A'),
@@ -217,8 +216,8 @@ CREATE TABLE MEDICAMENTO (
 (100000009, 'Raúl Fernández', '1992-06-18', 698901234, '90123456I'),
 
 (100000010, 'Elena Díaz', '1987-04-05', 699012345, '01234567J');
-
-
+``` 
+``` sql
 ### INSERT INTO ASEGURADO (sip, aseguradora) VALUES
 
 (100000001, 'Mapfre'),
@@ -240,8 +239,8 @@ CREATE TABLE MEDICAMENTO (
 (100000009, 'Allianz'),
 
 (100000010, 'Caser');
-
-
+``` 
+``` sql
 
 ### INSERT INTO CITA (fecha_cita, hora_cita, motivo_cita, dni_doctor, sip_paciente) VALUES
 
@@ -264,8 +263,8 @@ CREATE TABLE MEDICAMENTO (
 ('18-12-2024', '16:00:00', 'Revisión ginecológica', '90123456I', 100000009),
 
 ('19-12-2024', '17:00:00', 'Consulta respiratoria', '01234567J', 100000010);
-
-
+``` 
+``` sql
 ### INSERT INTO TRATAMIENTO (fecha_inicio, fecha_final, efectos_secundarios, dni_supervisor, sip_paciente) VALUES
 
 ('1-11-2024', '1-1-2025', 'Náuseas y mareos', '12345678A', 100000001),
@@ -287,9 +286,8 @@ CREATE TABLE MEDICAMENTO (
 ('9-11-2024', '1-9-2024', 'Aumento de peso', '90123456I', 100000009),
 
 ('10-11-2024', '1-10-2024', 'Tos persistente', '01234567J', 100000010);
-
-
-
+``` 
+``` sql
 ### INSERT INTO HOSPITALIZACION (fecha_ingreso, fecha_alta, area, dni_doctor, sip_paciente) VALUES
 
 ('2024-10-01', '2024-10-10', 'Cardiología', '12345678A', 100000001),
@@ -311,16 +309,15 @@ CREATE TABLE MEDICAMENTO (
 ('2024-11-05', '2024-11-15', 'Ginecología', '90123456I', 100000009),
 
 ('2024-11-10', '2024-11-20', 'Neumología', '01234567J', 100000010);
-
-
-
+``` 
+``` sql
 ### INSERT INTO MEDICAMENTO (nombre, dosis, frecuencia, observaciones, dni_doctor, sip_paciente) VALUES
 
 ('Ibuprofeno', '200mg', 'Cada 8 horas', 'Tomar después de las comidas', '12345678A', 100000001),
 
 ('Paracetamol', '500mg', 'Cada 6 horas', 'No exceder la dosis recomendada', '23456789B', 100000002);
 
-
+``` 
 ## Participacion
 
 Alejandro Exposito y Liam Rodriguez: DDL
